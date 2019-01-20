@@ -3,9 +3,9 @@ PLAIN = "plain"
 PLAIN_UP = "plain_uppercase"
 PLAIN_LO = "plain_lowercase"
 JSON = "json"
-HML = "xml"
+XML = "xml"
 
-SUPPORTED = [PLAIN, PLAIN_UP, PLAIN_LO, JSON, HML]
+SUPPORTED = [PLAIN, PLAIN_UP, PLAIN_LO, JSON, XML]
 
 
 def get_formatted(msg, imie, format):
@@ -18,7 +18,7 @@ def get_formatted(msg, imie, format):
         result = plain_text_lower_case(msg, imie)
     elif format == JSON:
         result = format_to_json(msg, imie)
-    elif format == HML:
+    elif format == XML:
         result = format_to_xml(msg, imie)
     return result
 
@@ -28,10 +28,10 @@ def format_to_json(msg, imie):
             msg + '"}')
 
 def format_to_xml(msg, imie):
-    return ("""<greetings>
-                <name="Arleta">Arleta</name>
-                <msg="Hello World">Hello World</msg>
-            </greetings>""")
+    return ('''<greetings>
+                <name='Arleta'>Arleta</name>
+                <msg="Hello">Hello</msg>
+                </greetings>''')
 
 def plain_text(msg, imie):
     return imie + ' ' + msg
