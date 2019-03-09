@@ -12,5 +12,4 @@ script:
 deploy:
   provider: heroku
   app: ancient-cove-74343
-  api_key: $d5af9f77-a65b-4509-b4dd-1bd22fbd5c5d
-
+  api_key: ${HEROKU_API_KEY}
