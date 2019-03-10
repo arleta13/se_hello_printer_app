@@ -13,7 +13,7 @@ pipeline {
 				thresholds: [
 					[$class: 'SkippedThreshold', failureThreshold: '0'],
 					[$class: 'FailedThreshold', failureThreshold: '1']],
-				toolsL [[$class: 'JUnitType', pattern: 'test_results.xml']]])
+					tool: [[$class: 'JUnitType', pattern: 'test_results.xml']]])
         	}
 		}
         }
